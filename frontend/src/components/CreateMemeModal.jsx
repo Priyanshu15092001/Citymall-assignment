@@ -1,5 +1,5 @@
 import React from "react";
-import MemeForm from "./Memeform";
+import MemeForm from "./MemeForm";
 import cross from '../assets/cross.png'
 export default function CreateMemeModal({ open, onClose }) {
   if (!open) return null;
