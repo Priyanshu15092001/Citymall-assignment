@@ -7,6 +7,19 @@ export default function MemeCard({ meme, refresh, latestBid }) {
 
   const placeBid = async () => {
     if (!bid) return;
+
+    const numericBid = parseInt(bid);
+
+    if (isNaN(numericBid) || numericBid < 1000) {
+      alert("🚫 Minimum bid is 1000 credits.");
+      return;
+    }
+
+    if (thisMemeBid && numericBid <= thisMemeBid.credits) {
+      alert(`🚫 New bid must be higher than current (${thisMemeBid.credits}).`);
+      return;
+    }
+
     updateBid(meme.id, bid)
       .then(async (response) => {
         const data = await response.json();

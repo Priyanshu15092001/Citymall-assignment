@@ -71,6 +71,8 @@ export async function fetchLeaderboard() {
 
 
 export async function updateBid(id,bid) {
+
+  
   try {
     const res = await fetch(`${URL}/memes/${id}/bid`, {
       method: "POST",
