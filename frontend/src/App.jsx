@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import MemeCard from "./components/MemeCard";
-import MemeForm from "./components/Memeform";
 import { useEffect } from "react";
 import { getAllMemes } from "./services";
 import Leaderboard from "./components/Leaderboard";
